@@ -114,6 +114,9 @@
     width: 120px;
     align-self: center;
 }
+#mainSocials img:hover{
+    animation: scaleup 500ms ease-in-out 0ms 1 normal;
+}
 /*Media Queries*/
 @media (max-width: 480px) {
     #mainIndex iframe{
