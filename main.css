@@ -19,13 +19,20 @@ body{
     align-items: center;
     background-color: #24A19C;
 }
+#header img,h1{
+    animation: logoAnim 1000ms ease-in 0ms 1 normal;
+}
 #menu{
     grid-area: menu;
     background-color: #24A19C;
 }
 #navbarSupportedContent>ul li{
+    background-color: #FAEEE7
+}
+#navbarSupportedContent>ul li:hover{
     border-radius: 5px;
-    background-color: #FAEEE7;
+    background-color: #fff;
+    transition: all 300ms;
 }
 /*MIDDLE*/
 .mainC{
@@ -75,3 +82,9 @@ body{
         justify-content: center;
     }
     }
+/*KEYFRAMES*/
+@keyframes logoAnim {
+    0%{
+        opacity: 0;
+    }
+}
