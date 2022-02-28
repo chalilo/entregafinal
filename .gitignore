@@ -1,6 +1,6 @@
 #Files
 
 #Files by extension
-
+*.json
 #Folders
-
+/node_modules

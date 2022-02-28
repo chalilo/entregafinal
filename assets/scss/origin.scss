@@ -1,0 +1,83 @@
+//VARIABLES
+$mainColor: #2E131E;
+$secColor: #1C2024;
+$thirdColor: #430E0F;
+$textColor: #FFF;
+/*GENERAL*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Lato";
+    color: $textColor;
+}
+body{
+    display: grid;
+    grid-template-areas: "header menu""content content""footer footer";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px auto 100px;
+    background-color: $mainColor;
+    min-height: 100vh;
+}
+/*TOP*/
+#header{
+    grid-area: header;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    background-color: $secColor;
+    img{
+        width: 100px;
+        height: auto;
+        filter: invert(96%) sepia(0%) saturate(18%) hue-rotate(324deg) brightness(103%) contrast(107%);
+    };
+    img,h1{
+        animation: logoAnim 1000ms ease-in 0ms 1 normal;
+    }
+}
+#menu{
+    grid-area: menu;
+    background-color: $secColor;
+}
+#navbarSupportedContent>ul li{
+    background-color: $mainColor;
+    &:hover{
+        border-radius: 5px;
+        background-color: $thirdColor;
+        transition: all 300ms;
+        animation: scaleup 300ms ease-in-out 0ms 1 normal;
+    }
+}
+/*MIDDLE*/
+.mainC{
+    grid-area: content;
+    margin: 10px 5%;
+    h2{
+        margin-bottom: 10px;
+    }
+}
+/*BOTTOM*/
+#footer{
+    grid-area: footer;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: $thirdColor;
+    a{
+        color: white;
+        text-decoration: none;
+        &:first-child{
+            order: -2;
+        }
+    }
+    img{
+        width: 100px;
+        height: auto;
+        filter: invert(96%) sepia(0%) saturate(18%) hue-rotate(324deg) brightness(103%) contrast(107%);
+        order: -1;
+    }
+}
+//PARTIALS
+@import "content";
+@import "media_queries";
+@import "keyframes";
